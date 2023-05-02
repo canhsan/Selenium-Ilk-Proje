@@ -8,5 +8,6 @@ public class C01_WebDriverIlkKlas {
         System.setProperty("webdriver.chrome.driver","src/resources/chromedriver_win32/chromedriver.exe");
         WebDriver driver =new ChromeDriver();
         driver.get("https:\\www.amazon.com");
+        driver.get("https:\\www.google.com");
     }
 }
