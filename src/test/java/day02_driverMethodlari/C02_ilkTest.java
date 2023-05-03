@@ -38,9 +38,12 @@ public class C02_ilkTest {
          }else{
              System.out.println("URL amazon içermiyor, URL Test FAİLED");
          }
+
+
         System.out.println("Sayfanın handle değeri: "+ driver.getWindowHandle());
          expectedIcerik="alısveris";
          String actualPageSource=driver.getPageSource();
+
          if (actualPageSource.contains(expectedIcerik)){
              System.out.println("Sayfa kaynak kodları alısveris içeriyor,test PASSED");
          }else{
