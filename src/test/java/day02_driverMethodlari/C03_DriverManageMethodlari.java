@@ -35,8 +35,8 @@ public class C03_DriverManageMethodlari {
         System.out.println("minimize :"+driver.manage().window().getPosition());
         System.out.println("minimize: "+driver.manage().window().getSize());
 
-        driver.manage().window().setPosition(new Point(50,50));
-        driver.manage().window().setSize(new Dimension(500,500));
+        driver.manage().window().setPosition(new Point(100,100));
+        driver.manage().window().setSize(new Dimension(750,750));
         Thread.sleep(3000);
 
         System.out.println("İstediğimiz konum :"+driver.manage().window().getPosition());
