@@ -1,7 +1,10 @@
 package day03_locators;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 import java.time.Duration;
 
@@ -12,16 +15,15 @@ public class C01_findElement {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
 
+        driver.get("https://amazon.com");
+
+        WebElement aramaKutusuElementi= driver.findElement(By.id("twotabsearchtextbox"));
+        aramaKutusuElementi.sendKeys("nutella");
+        aramaKutusuElementi.submit();
 
 
 
-
-
-
-
-
-
-        Thread.sleep(3000);
+        Thread.sleep(7000);
         driver.close();
     }
 }
