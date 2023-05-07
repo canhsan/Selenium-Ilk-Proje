@@ -35,21 +35,22 @@ public class C04_GoogleNutella {
         WebElement aramaKutusu=driver.findElement(By.xpath("//*[@id=\"APjFqb\"]"));
         aramaKutusu.sendKeys("nutella"+ Keys.ENTER);
 
+
         //6- Bulunan sonuc sayisini yazdirin
         WebElement  sonucYazisiElementi=driver.findElement(By.xpath("//*[@id=\"result-stats\"]"));
         System.out.println(sonucYazisiElementi.getText());
 
         //7- sonuc sayisinin 10 milyon’dan fazla oldugunu test edin
-        String sanucYazisiStr=sonucYazisiElementi.getText();
-        String[] sonucYaziKelimeleriArr=sanucYazisiStr.split(" ");
-        String sonucSayiAdediStr=sonucYaziKelimeleriArr[1];
-        sonucSayiAdediStr=sanucYazisiStr.replaceAll("\\D","");
-        int sonucSayisiInt=Integer.parseInt(sonucSayiAdediStr);
+        String sonucYazisiStr= sonucYazisiElementi.getText();
+        String[] sonucYaziKelimeleriArr = sonucYazisiStr.split(" ");
+        String sonucSayiAdediStr=sonucYaziKelimeleriArr[1]; // 130.000.000
+        sonucSayiAdediStr = sonucSayiAdediStr.replaceAll("\\D",""); // "130000000"
+        int sonucSayisiInt= Integer.parseInt(sonucSayiAdediStr);
 
         if (sonucSayisiInt>10000000){
-            System.out.println("Sonuc sayısı testi PASSED");
+            System.out.println("sonuc sayisi testi PASSED");
         }else{
-            System.out.println("Sonuc sayısı testi FAİLED");
+            System.out.println("Sonuc sayisi testi FAILED");
         }
 
         //8- Sayfayi kapatin
