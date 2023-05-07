@@ -22,16 +22,16 @@ public class C02_Xpath {
         driver.findElement(By.xpath("//*[@id=\"content\"]/div/button")).click();
         Thread.sleep(3000);
 
-       // 3- Delete butonu’nun gorunur oldugunu test edin
+        // 3- Delete butonu’nun gorunur oldugunu test edin
         WebElement deleteButtonElementi= driver.findElement(By.xpath("//*[@id=\"elements\"]/button"));
         if (deleteButtonElementi.isDisplayed()){
             System.out.println("Delete button testi is PASSED");
         }else{
             System.out.println("Delete button testi is FAİLED");
         }
-       // 4- Delete tusuna basin
+        // 4- Delete tusuna basin
         deleteButtonElementi.click();
-       // 5- “Add/Remove Elements” yazisinin gorunur oldugunu test edin
+        // 5- “Add/Remove Elements” yazisinin gorunur oldugunu test edin
         WebElement addElementsElementi=driver.findElement(By.xpath("//*[@id=\"content\"]/h3"));
 
         if (addElementsElementi.isDisplayed()){
