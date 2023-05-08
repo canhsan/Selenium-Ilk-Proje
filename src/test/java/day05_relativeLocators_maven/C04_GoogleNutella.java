@@ -36,6 +36,7 @@ public class C04_GoogleNutella {
         aramaKutusu.sendKeys("nutella"+ Keys.ENTER);
 
 
+
         //6- Bulunan sonuc sayisini yazdirin
         WebElement  sonucYazisiElementi=driver.findElement(By.xpath("//*[@id=\"result-stats\"]"));
         System.out.println(sonucYazisiElementi.getText());
@@ -56,7 +57,7 @@ public class C04_GoogleNutella {
         //8- Sayfayi kapatin
 
 
-        Thread.sleep(3000);
+        Thread.sleep(4000);
         driver.close();
 
     }
